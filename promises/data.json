@@ -1,7 +1,6 @@
 {
   "food": [
     {
-      "id": 1,
       "name": "pizza",
       "calories": 1000,
       "ingredients": [
@@ -11,7 +10,6 @@
       ]
     },
     {
-      "id": 2,
       "name": "hamburger",
       "calories": 800,
       "ingredients": [
@@ -22,7 +20,6 @@
       ]
     },
     {
-      "id": 3,
       "name": "hotdog",
       "calories": 400,
       "ingredients": [
