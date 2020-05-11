@@ -11,7 +11,7 @@ const answers = [
 ];
 
 export function ask(question, callback) {
-
+  debugger;
   const doesWork = Math.random() >= 0.5;
 
   if(callback) {
