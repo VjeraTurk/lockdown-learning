@@ -1,0 +1,23 @@
+How to create rest APIs
+
+POST
+create an user with id next id
+return 200 return the created user
+
+
+PUT/PATCH
+David prefers PUT over PATCH- patch is not ment to be used to create objects!
+
+
+- to create non-existing id
+- to update, existing id
+
+/pet
+- should return owner id
+
+/person/1/pets - all users pets
+/person/1/pets/2 - returns a user's pet
+
+ways of connecting pet and owners:
+- person has an array of pet ids
+- array of objects (?)
