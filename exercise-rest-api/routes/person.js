@@ -1,3 +1,5 @@
+let id = 2;
+
 const {readPets, readPetsById} = require('./routes/pet');
 let people = [
     {
@@ -7,7 +9,7 @@ let people = [
         age : 30,
     },
     {
-        id : 1,
+        id : 2,
         name : 'John',
         surname : 'Smith',
         age : 35,
@@ -33,10 +35,10 @@ const deletePersonById = (id) =>{
 const createPerson = (name, surname, age)=>{
     //will increment id manually, because why not
     //const newID = people.map(person => person.id).reduce();
-    const newid = people[people.length-1].id + 1;
+    //const newid = people[people.length-1].id + 1;
     const newPerson ={
-        //id = ++id,
-        id = newid,
+        //id = l++id,
+        id : ++id,
         name,
         surname,
         age,
