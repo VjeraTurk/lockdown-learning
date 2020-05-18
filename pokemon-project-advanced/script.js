@@ -1,4 +1,4 @@
-import { colors } from './data';
+import { colors, types } from './data';
 import { createPokemon, deletePokemon } from './fetch';
 
 const getBackground = (type) => type.length === 2 ? `linear-gradient(0.625turn, ${colors[type[0]]} 50%, ${colors[type[1]]} 50% 100%)` : colors[type[0]]
@@ -27,6 +27,7 @@ const initSearchBox = () => {
   searchTextElement.onkeyup = (event) => filterPokemonList(event.target.value);
 }
 
+
 const createPokemonList = async () => {
   const response = await fetch('http://localhost:3000/pokemon');
 
@@ -52,13 +53,110 @@ const createPokemonList = async () => {
     pokemonElement.appendChild(pokemonNameElement);
     wrapperElement.appendChild(pokemonElement);
 
+    pokemonElement.onclick=() =>{
+      console.log(pokemonElement.id);
+      deletePokemon(Number(pokemonElement.id));
+    };
     pokemonElementList.push(pokemonElement);
   });
 };
 
+
+const initNewPokemonForm = ()=> {
+
+  //const types = colors
+  const newPokemonForm = document.querySelector('.form-wrapper');
+
+  const pokemonEnglishNameElement = document.createElement('input');
+  const pokemonJapaneseNameElement = document.createElement('input');
+  const pokemonChineseNameElement = document.createElement('input');
+  const pokemonFrenchNameElement = document.createElement('input');
+
+  pokemonEnglishNameElement.type = 'text';
+  pokemonEnglishNameElement.placeholder = 'English name';
+
+  pokemonJapaneseNameElement.type = 'text';
+  pokemonJapaneseNameElement.placeholder = 'Japanese name';
+
+  pokemonChineseNameElement.type = 'text';
+  pokemonChineseNameElement.placeholder = 'Chinese name';
+
+  pokemonFrenchNameElement.type = 'text';
+  pokemonFrenchNameElement.placeholder = 'French name';
+
+  newPokemonForm.appendChild(pokemonEnglishNameElement);
+  newPokemonForm.appendChild(pokemonJapaneseNameElement);
+  newPokemonForm.appendChild(pokemonChineseNameElement);
+  newPokemonForm.appendChild(pokemonFrenchNameElement);
+
+  console.log(types.types);
+
+  const pokemon1stTypeElement = document.createElement('select');
+  const pokemon2ndTypeElement = document.createElement('select');
+
+  const defaultOption = document.createElement('option');
+  defaultOption.setAttribute("value", "");
+  defaultOption.textContent = "--";
+
+  pokemon1stTypeElement.appendChild(defaultOption);
+  pokemon2ndTypeElement.appendChild(defaultOption);
+
+  types.types.forEach((type) => {
+    const option = document.createElement('option');
+    option.setAttribute("name",type);
+    option.setAttribute("id",type);
+    option.setAttribute("value",type);
+    option.setAttribute("label",type);
+    option.textContent= type;
+
+    pokemon1stTypeElement.appendChild(option);
+    pokemon2ndTypeElement.appendChild(option); // deappenda iz 1stTypeElement
+  })
+  newPokemonForm.appendChild(pokemon1stTypeElement);
+  newPokemonForm.appendChild(pokemon2ndTypeElement);
+
+  const submitButtonElement = document.createElement('button');
+
+  submitButtonElement.onclick = ()=>{
+    console.log('Submit');
+    //const type = new Array;
+    //if (pokemon1stTypeElement)
+
+    //new Pokemon();
+    createPokemon({
+      name: {
+        english: pokemonEnglishNameElement.value,
+        japanese: pokemonJapaneseNameElement.value,
+        chinese: pokemonChineseNameElement.value,
+        french: pokemonFrenchNameElement.value
+      },
+      type: ["Grass", // ? length 
+      "Poison"
+    ],
+      base: {
+        HP: 45,
+        Attack: 49,
+        Defense: 49,
+        "Sp. Attack": 65,
+        "Sp. Defense": 65,
+        Speed: 45
+      }
+    });
+  }
+  submitButtonElement.textContent = "Done";
+  newPokemonForm.appendChild(submitButtonElement);
+
+}
+
+const updatePokemonList =  ()=> {
+
+}
+
+
 const init = () => {
   createPokemonList();
   initSearchBox();
+  initNewPokemonForm();
 };
 
 init();
@@ -91,4 +189,3 @@ init();
 
 // 3. On every delition or creation of a pokemon, you should update (refetch) the data
 //function updatePokemonList that will **do some magic**
-

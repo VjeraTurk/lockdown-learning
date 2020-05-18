@@ -1,3 +1,23 @@
+export const types = {
+  types :  ['Grass',
+  'Poison',
+  'Fire',
+  'Flying',
+  'Water',
+  'Bug',
+  'Normal',
+  'Electric',
+  'Ground',
+  'Fairy',
+  'Fighting',
+  'Psychic',
+  'Rock',
+  'Ice',
+  'Dragon',
+  'Dark',
+  'Steel',
+  'Ghost']
+}
 export const colors = {
   Grass: '#78C850',
   Poison: '#A040A0',

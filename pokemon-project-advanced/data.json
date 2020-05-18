@@ -125,26 +125,6 @@
       }
     },
     {
-      "id": 8,
-      "name": {
-        "english": "Wartortle",
-        "japanese": "カメール",
-        "chinese": "卡咪龟",
-        "french": "Carabaffe"
-      },
-      "type": [
-        "Water"
-      ],
-      "base": {
-        "HP": 59,
-        "Attack": 63,
-        "Defense": 80,
-        "Sp. Attack": 65,
-        "Sp. Defense": 80,
-        "Speed": 58
-      }
-    },
-    {
       "id": 9,
       "name": {
         "english": "Blastoise",
@@ -162,26 +142,6 @@
         "Sp. Attack": 85,
         "Sp. Defense": 105,
         "Speed": 78
-      }
-    },
-    {
-      "id": 10,
-      "name": {
-        "english": "Caterpie",
-        "japanese": "キャタピー",
-        "chinese": "绿毛虫",
-        "french": "Chenipan"
-      },
-      "type": [
-        "Bug"
-      ],
-      "base": {
-        "HP": 45,
-        "Attack": 30,
-        "Defense": 35,
-        "Sp. Attack": 20,
-        "Sp. Defense": 20,
-        "Speed": 45
       }
     },
     {
@@ -16319,27 +16279,6 @@
       }
     },
     {
-      "id": 798,
-      "name": {
-        "english": "Kartana",
-        "japanese": "カミツルギ",
-        "chinese": "纸御剑",
-        "french": "Engloutyran"
-      },
-      "type": [
-        "Grass",
-        "Steel"
-      ],
-      "base": {
-        "HP": 59,
-        "Attack": 181,
-        "Defense": 131,
-        "Sp. Attack": 59,
-        "Sp. Defense": 31,
-        "Speed": 109
-      }
-    },
-    {
       "id": 799,
       "name": {
         "english": "Guzzlord",
@@ -16402,27 +16341,6 @@
       }
     },
     {
-      "id": 802,
-      "name": {
-        "english": "Marshadow",
-        "japanese": "マーシャドー",
-        "chinese": "玛夏多",
-        "french": "Vémini"
-      },
-      "type": [
-        "Fighting",
-        "Ghost"
-      ],
-      "base": {
-        "HP": 90,
-        "Attack": 125,
-        "Defense": 80,
-        "Sp. Attack": 90,
-        "Sp. Defense": 90,
-        "Speed": 125
-      }
-    },
-    {
       "id": 803,
       "name": {
         "english": "Poipole",
@@ -16464,106 +16382,25 @@
       }
     },
     {
-      "id": 805,
       "name": {
-        "english": "Stakataka",
-        "japanese": "ツンデツンデ",
-        "chinese": "垒磊石",
-        "french": "Pierroteknik"
+        "english": "Tripica",
+        "japanese": "フシギダネ",
+        "chinese": "妙蛙种子",
+        "french": "Le Bubclone"
       },
       "type": [
-        "Rock",
-        "Steel"
+        "Grass",
+        "Poison"
       ],
       "base": {
-        "HP": 61,
-        "Attack": 131,
-        "Defense": 211,
-        "Sp. Attack": 53,
-        "Sp. Defense": 101,
-        "Speed": 13
-      }
-    },
-    {
-      "id": 806,
-      "name": {
-        "english": "Blacephalon",
-        "japanese": "ズガドーン",
-        "chinese": "砰头小丑",
-        "french": "Zeraora"
-      },
-      "type": [
-        "Fire",
-        "Ghost"
-      ],
-      "base": {
-        "HP": 53,
-        "Attack": 127,
-        "Defense": 53,
-        "Sp. Attack": 151,
-        "Sp. Defense": 79,
-        "Speed": 107
-      }
-    },
-    {
-      "id": 807,
-      "name": {
-        "english": "Zeraora",
-        "japanese": "ゼラオラ",
-        "chinese": "捷拉奥拉",
-        "french": "Meltan"
-      },
-      "type": [
-        "Electric"
-      ],
-      "base": {
-        "HP": 88,
-        "Attack": 112,
-        "Defense": 75,
-        "Sp. Attack": 102,
-        "Sp. Defense": 80,
-        "Speed": 143
-      }
-    },
-    {
-      "id": 808,
-      "name": {
-        "english": "Meltan",
-        "japanese": "メルタン",
-        "chinese": "美录坦",
-        "french": "Melmetal"
-      },
-      "type": [
-        "Steel"
-      ],
-      "base": {
-        "HP": 46,
-        "Attack": 65,
-        "Defense": 65,
-        "Sp. Attack": 55,
-        "Sp. Defense": 35,
-        "Speed": 34
-      }
-    },
-    {
-      "id": 809,
-      "name": {
-        "english": "Melmetal",
-        "japanese": "メルメタル",
-        "chinese": "美录梅塔",
-        "french": ""
-      },
-      "type": [
-        "Steel"
-      ],
-      "base": {
-        "HP": 135,
-        "Attack": 143,
-        "Defense": 143,
-        "Sp. Attack": 80,
+        "HP": 45,
+        "Attack": 49,
+        "Defense": 49,
+        "Sp. Attack": 65,
         "Sp. Defense": 65,
-        "Speed": 34
-      }
+        "Speed": 45
+      },
+      "id": 805
     }
   ]
 }
