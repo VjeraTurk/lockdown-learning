@@ -16217,27 +16217,6 @@
       }
     },
     {
-      "id": 795,
-      "name": {
-        "english": "Pheromosa",
-        "japanese": "フェローチェ",
-        "chinese": "费洛美螂",
-        "french": "Câblifère"
-      },
-      "type": [
-        "Bug",
-        "Fighting"
-      ],
-      "base": {
-        "HP": 71,
-        "Attack": 137,
-        "Defense": 37,
-        "Sp. Attack": 137,
-        "Sp. Defense": 37,
-        "Speed": 151
-      }
-    },
-    {
       "id": 796,
       "name": {
         "english": "Xurkitree",
@@ -16401,6 +16380,69 @@
         "Speed": 45
       },
       "id": 805
+    },
+    {
+      "name": {
+        "english": "alot",
+        "japanese": "alo",
+        "chinese": "al",
+        "french": "a"
+      },
+      "type": [
+        "Flying",
+        "Grass"
+      ],
+      "base": {
+        "HP": "10",
+        "Attack": "20",
+        "Defense": "20",
+        "Sp. Attack": "30",
+        "Sp. Defense": "40",
+        "Speed": "50"
+      },
+      "id": 810
+    },
+    {
+      "name": {
+        "english": "Šmalaz",
+        "japanese": "-",
+        "chinese": "-",
+        "french": "-"
+      },
+      "type": [
+        "Fire",
+        "Flying"
+      ],
+      "base": {
+        "HP": "1000",
+        "Attack": "15",
+        "Defense": "10",
+        "Sp. Attack": "30",
+        "Sp. Defense": "20",
+        "Speed": "50"
+      },
+      "id": 811
+    },
+    {
+      "name": {
+        "english": "test",
+        "japanese": "tes",
+        "chinese": "te",
+        "french": "t"
+      },
+      "type": [
+        "Fire",
+        "Ground"
+      ],
+      "base": {
+        "HP": 10,
+        "Attack": 20,
+        "Defense": 30,
+        "Sp. Attack": 40,
+        "Sp. Defense": 50,
+        "Speed": 60
+      },
+      "id": 812
     }
   ]
 }
