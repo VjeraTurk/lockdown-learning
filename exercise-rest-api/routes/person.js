@@ -1,6 +1,6 @@
+const {readPets, readPetsById} = require('./pet');
 let id = 2;
 
-const {readPets, readPetsById} = require('./routes/pet');
 let people = [
     {
         id : 1,

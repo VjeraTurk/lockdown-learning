@@ -33,7 +33,7 @@ const createPet = (name, species, owner)=>{
     const newid = pets[pets.length-1].id + 1;
     const newPet ={
        // id =++id,
-        id = newid,
+        id : newid,
         name,
         surname,
         age,
@@ -46,5 +46,6 @@ module.exports = {
     readPets,
     readPetById,
     deletePetById,
-    readPetByOwnerId
+    readPetByOwnerId,
+    createPet
 }

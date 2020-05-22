@@ -1,16 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { readPeople, readPersonById, deletePersonById} = require('./routes/person')
-const { readPet, readPetById, deletePetById} = require('./routes/pet')
+const { readPets, readPetById,readPetByOwnerId, deletePetById} = require('./routes/pet')
 const app = express();
-
+app.use(bodyParser.json());
 //person
 app.route('/person')
  .get((req,res) =>{
     res.send(readPeople());
   })
   .post((req, res)=>{
-    const result = createPerosn(req.body.name, req.body.username, req.body)
+    const result = createPerson(req.body.name, req.body.username, req.body);
   })
   app.route('/person/:id')
   .get( (req, res) =>{
@@ -30,7 +30,7 @@ app.route('/pet')
     res.send(readPets());
   })
   .post((req, res)=>{
-    const result = createPerosn(req.body.name, req.body.username, req.body)
+    const result = createPerosn(req.body.name, req.body.username, req.body);
   })
   app.route('/pet/:id')
   .get( (req, res) =>{
