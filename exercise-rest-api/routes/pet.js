@@ -1,51 +1,70 @@
+let id = 2;
+
 let pets = [
     {
         id : 1,
-        name : 'David',
-        surname : 'Abram',
-        age : 30,
+        name : 'Tami',
+        species : 'dog',
+        ownerId : 2
     },
     {
-        id : 1,
-        name : 'John',
-        surname : 'Smith',
-        age : 35,
-    },
-
+        id : 2,
+        name : 'Bela',
+        species : 'dog',
+        ownerId : 1
+    }, //Json doesn't tolerate thees commas
+   // , //nor thees
 ]
 
 const readPets = (req, res)=>{
     return pets;
 }
-
-const readPetByOwnerId = (ownerId)=>{
-
-}
 const readPetById = (id)=>{
-    return pets.find (Pet => Pet.id === id); // will return null if no such id
+    return pets.find (pet => pet.id === id); // will return null if no such id
+}
+const readPetByOwnerId = (id) =>{
+    return pets.filter( pet => pet.ownerId === id);
 }
 //array.splice + findIndex
 const deletePetById = (id) =>{
-    const newPets = pets.filter(Pet => Pet.id !== id);
+    const pets = readPetByOwnerId(id);
+    pets
+    const newPets = pets.filter(pet => pet.id !== id);
+    pets.foreach(pet => pet.ownerId = null);
     pets = newPets;
 }
-const createPet = (name, species, owner)=>{
-    const newid = pets[pets.length-1].id + 1;
-    const newPet ={
-       // id =++id,
-        id : newid,
+const createPet = (name, species, ownerId) =>{
+
+    const newPet = {
+
+        id : ++id,
         name,
-        surname,
-        age,
+        species,
+        ownerId,
     }
-    pets.add(newPet);
+
+    pets.push(newPet);
+    console.log(newPet);
     return newPet;
+};
+const createPets = (newPets) => {
+    console.log(newPets);
+    return newPets.map(newPet => createPet(newPet));
+};
+const updatePet = (id, name, species, ownerId) => {
+    const pet = pets.find(pet => pet.id === id);
+    pet.name = name ? name : pet.name;
+    pet.species = species ? species : pet.species;
+    pet.ownerId = ownerId ? ownerId : pet.ownerId;
+    return pet;
 }
 
 module.exports = {
     readPets,
     readPetById,
-    deletePetById,
     readPetByOwnerId,
-    createPet
+    deletePetById,
+    createPet,
+    createPets,
+    updatePet,
 }
